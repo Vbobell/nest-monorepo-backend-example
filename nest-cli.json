@@ -1,0 +1,30 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/swapi/src",
+  "monorepo": true,
+  "root": "apps/swapi/src",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/swapi/tsconfig.app.json"
+  },
+  "projects": {
+    "swapi": {
+      "type": "application",
+      "root": "apps/swapi",
+      "entryFile": "main",
+      "sourceRoot": "apps/swapi/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/swapi/tsconfig.app.json"
+      }
+    },
+    "api": {
+      "type": "library",
+      "root": "libs/api",
+      "entryFile": "index",
+      "sourceRoot": "libs/api/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/api/tsconfig.lib.json"
+      }
+    }
+  }
+}
